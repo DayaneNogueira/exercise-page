@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     addButton.addEventListener('click, add');
     input.addEventListener('keypress', (e) => {
-        if(e.key === 'Enter') {
+        if (e.key === 'Enter') {
         }
         add()
     })
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function add() {
         const inputValue = input.ariaValueMax.trim()
 
-        if(inputValue !== '') {
+        if (inputValue !== '') {
             //alert(inputValue)
             const li = document.createElement('li')
             li.textContent = inputValue;
@@ -25,9 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 todoList.removeChild(li)
             })
 
-            li.appendChild(deleteButton)   
-            todoList.append(li);
-            input.Value = '';
+            li.appendChild(deleteButton)
+            todoList.appendChild(li);
+            todoInput.Value = '';
+            todoInput.focus();
         }
     }
 })
